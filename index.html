@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="publico/main.css">
+    <title>Secciones y líneas generales de un documento HTML5</title>
+</head>
+
+<body>
+    <!-- start encabezado -->
+    <header class="encabezado">
+        <a name="inicio" id="inicio"></a>
+        <nav class="navegador">
+            <h1 class="logo">Aprender es vivir!?</h1>
+            <ul>
+                <li>caso 1</li>
+                <li>caso 2</li>
+                <li>caso 3</li>
+                <li>caso 4</li>
+            </ul>
+        </nav>
+    </header>
+    <!-- end encabezado -->
+    <!-- start cuerpo principal -->
+    <main class="contenedor">
+        <section class="=contenedor1a" id="prncp">
+            <h1>Secciones y líneas generales de un documento HTML5</h1>
+            <br/><p>La especificación HTML5 trae muchos nuevos elementos a los desarrolladores web, permitiéndoles describir la estructura de un documento web con semántica estandarizada. <br/>Este documento describe estos elementos y cómo usarlos para definir el perfil de cualquier documento.
+            </p>
+        </section>
+        <section class="=contenedor2b" id="secizq">
+            <h2>Problemas resueltos por HTML5</h2>
+            <p>
+                La definición de la estructura de un documento en HTML 4 y su algoritmo de perfilado es muy tosco y genera numerosos problemas:
+            </p>
+            <article>
+                HTML5 quita la necesidad de elementos &ltdiv&gt para definir secciones semánticas sin definir valores específicos para los atributos class, introduciendo un nuevo elemento, &ltsection&gt, el elemento de sección HTML.<br/> Mezclar varios documentos es difícil: la inclusión de un sub-documento en un documento principal. Esto se resuelve en HTML5 con los elementos de seccionado (&ltarticle&gt, &ltsection&gt, &ltnav&gt y &ltaside&gt) son siempre subsecciones de su sección ancestra más cercana.<br/> HTML5 introduce el elemento &lthgroup&gt que oculta todos los elementos de cabecera excepto el primero de más alto rango (por ejemplo, &lthgroup&gt&lth1&gtJustine&lt/h1&gt&lth2&gtLes Malheurs de la Vertu&lt/h2&gt&lt/hgroup&gt crea el perfil 1. Justine).<br/>Un documento puede tener secciones especiales conteniendo información relacionado que no es parte del flujo principal. HTML5 introduce el elemento &ltaside&gt permitiendo a dichas secciones no ser parte del perfil principal.<br/>Hay información relacionada no al documento pero si al sitio entero, como logos, menús, tablas de contenidos, o información de derechos de autor y notas legales. Para ese propósito, HTML5 introduce tres elementos de sección específicos: &ltnav&gt para colecciones de enlaces, como una tabla de contenidos, &ltfooter&gt y &ltheader&gt información relacionada con el sitio.<br/><br/>De manera más general, HTML5 trae precisión a las características de seccionado y cabecera, permitiendo a los perfiles de documento ser predecibles y usados por el navegador para mejorar la experiencia de usuario.                   
+            </article>
+        </section>
+        <section class="=contenedor2c" id="secder">
+            <h3>El algoritmo de perfilado de HTML5</h3>
+            <h4>Definiendo secciones en HTML5</h4>            
+            <p>
+                Todo el contenido incluido dentro del elemento &ltbody&gt es parte de una    sección. Las secciones en HTML5 pueden ser anidadas. Además de la sección principal, definida por el elemento &ltbody&gt, los límites de la sección son definidos explícita o implícitamente. Las secciones definidas explícitamente son el contenido definido en las etiquetas &ltbody&gt, &ltsection&gt, &ltarticle&gt, &ltaside&gt, &ltfooter&gt, &ltheader&gt, y &ltnav&gt. <br/>Nota: Cada sección puede tener su propia jerarquía de cabeceras. Por lo tanto, incluso una sección anidada puede tener un elemento &lth1&gt. Consulte también Definiendo cabeceras en HTML5.<br/><br/>Ejemplo:
+            </p>
+            <div>
+                &ltsection&gt<br/>
+                    <span style="margin: 5%;">&lth1&gtForest elephants&lt/h1&gt</span><br/>
+                    <span style="margin: 5%;">&ltsection&gt</span><br/>
+                        <span style="margin: 13%;">&lth1&gtIntroduction&lt/h1&gt</span><br/>
+                        <span style="margin: 13%;">&ltp&gtIn this section, we discuss the lesser</span><br/>
+                        <span style="margin: 13%;">known forest elephants.&lt/p&gt</span><br/>
+                    <span style="margin: 5%;">&lt/section&gt</span><br/>
+                    <span style="margin: 5%;">&ltsection&gt</span><br/>
+                        <span style="margin: 13%;">&lth1&gtHabitat&lt/h1&gt</span><br/>
+                        <span style="margin: 13%;">&ltp&gtForest elephants do not live in trees but</span><br/>
+                        <span style="margin: 13%;">among them.&lt/p&gt</span><br/>
+                    <span style="margin: 5%;">&lt/section&gt</span><br/>
+                    <span style="margin: 5%;">&ltaside&gt</span><br/>
+                        <span style="margin: 13%;">&ltp&gtadvertising block&lt/p&gt</span><br/>
+                    <span style="margin: 5%;">&lt/aside&gt</span><br/>
+                &lt/section&gt<br/>
+                &ltfooter&gt<br/>
+                    <span style="margin: 5%;">&ltp&gt(c) 2010 The Example company&lt/p&gt</span><br/>
+                &lt/footer&gt<br/>
+            </div>
+        </section>
+    <!-- start barra lateral -->
+        <aside class="contenedor3">
+            <span>Lista de <br/>conceptos<br/> importantes</span>
+            <button onclick="">div</button>
+            <button onclick="">section</button>
+            <button onclick="">nav</button>
+            <button onclick="">aside</button>
+            <button onclick="">hgroup</button>
+            <button onclick="">footer</button>
+            <button onclick="">header</button>
+            <button onclick="">algoritmo</button>
+        </aside>
+    <!-- end barra lateral -->
+    </main>
+    <!-- end cuerpo principal -->
+    <!-- start pie de pagina -->
+    <footer class="piedepag">
+        <ul>
+            <li>
+                <a href="publico/contacto.html">Contacto</a>
+            </li>
+            <li>
+                <a href="publico/nosotros.html">Nosotros</a>
+            </li>
+            <li>
+                <a href="#inicio">Ir a inicio</a>
+            </li>
+        </ul>
+    </footer>
+    <hr>     
+    <p id="autor">Realizado by Emiliano Zapata</p>
+    <hr>  
+    <!-- end pie de pagina -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script> -->
+    <script>src = "publico/main.css"</script>
+</body>
+</html>
